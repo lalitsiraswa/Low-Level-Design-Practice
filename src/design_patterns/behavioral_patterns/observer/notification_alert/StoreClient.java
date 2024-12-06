@@ -1,10 +1,10 @@
-package design_patterns.behavioral_patterns.observer;
+package design_patterns.behavioral_patterns.observer.notification_alert;
 
-import design_patterns.behavioral_patterns.observer.observable.IphoneObservableImpl;
-import design_patterns.behavioral_patterns.observer.observable.StockObservable;
-import design_patterns.behavioral_patterns.observer.observer.EmailAlertObserverImpl;
-import design_patterns.behavioral_patterns.observer.observer.MobileAlertObserverImpl;
-import design_patterns.behavioral_patterns.observer.observer.NotificationAlertObserver;
+import design_patterns.behavioral_patterns.observer.notification_alert.observable.IphoneObservableImpl;
+import design_patterns.behavioral_patterns.observer.notification_alert.observable.StockObservable;
+import design_patterns.behavioral_patterns.observer.notification_alert.observer.EmailAlertObserverImpl;
+import design_patterns.behavioral_patterns.observer.notification_alert.observer.MobileAlertObserverImpl;
+import design_patterns.behavioral_patterns.observer.notification_alert.observer.NotificationAlertObserver;
 
 public class StoreClient {
     public static void main(String[] args) {

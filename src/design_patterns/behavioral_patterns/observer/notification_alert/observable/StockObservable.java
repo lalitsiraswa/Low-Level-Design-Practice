@@ -1,6 +1,6 @@
-package design_patterns.behavioral_patterns.observer.observable;
+package design_patterns.behavioral_patterns.observer.notification_alert.observable;
 
-import design_patterns.behavioral_patterns.observer.observer.NotificationAlertObserver;
+import design_patterns.behavioral_patterns.observer.notification_alert.observer.NotificationAlertObserver;
 
 public interface StockObservable {
     void add(NotificationAlertObserver observer);

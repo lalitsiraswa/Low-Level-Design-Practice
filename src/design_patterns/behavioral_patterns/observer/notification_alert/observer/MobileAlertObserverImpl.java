@@ -1,6 +1,6 @@
-package design_patterns.behavioral_patterns.observer.observer;
+package design_patterns.behavioral_patterns.observer.notification_alert.observer;
 
-import design_patterns.behavioral_patterns.observer.observable.StockObservable;
+import design_patterns.behavioral_patterns.observer.notification_alert.observable.StockObservable;
 
 public class MobileAlertObserverImpl implements NotificationAlertObserver {
     StockObservable observable;
