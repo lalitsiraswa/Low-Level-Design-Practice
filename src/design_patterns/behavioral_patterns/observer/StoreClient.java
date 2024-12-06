@@ -19,5 +19,6 @@ public class StoreClient {
         iphoneStockObservable.add(observer3);
 
         iphoneStockObservable.setStockCount(10);
+        System.out.println(iphoneStockObservable.getStockCount());
     }
 }
