@@ -25,7 +25,28 @@ class OurGenericList<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new OurGenericListIterator(this);
+    }
+
+    private class OurGenericListIterator implements Iterator<T> {
+        private OurGenericList<T> list;
+        private int index = 0;
+
+        public OurGenericListIterator(OurGenericList<T> list) {
+            this.list = list;
+        }
+
+        @Override
+        public boolean hasNext() {
+            System.out.println(Thread.currentThread().getName() + " hasNext Call");
+            return index < list.size;
+        }
+
+        @Override
+        public T next() {
+            System.out.println(Thread.currentThread().getName() + " Next Call");
+            return list.items[index++];
+        }
     }
 }
 
@@ -35,9 +56,16 @@ public class CustomGenericList {
         list.add(1);
         list.add(2);
         list.add(3);
+        list.add(4);
 
-        for (int x : list) {
-
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("-----");
+        // The Enhance For Loop Is Also Calling The 'next()' And 'hasNext()' Method.
+        for (Integer item : list) {
+            System.out.println(item);
         }
     }
 }
