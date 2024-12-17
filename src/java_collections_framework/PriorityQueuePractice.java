@@ -2,6 +2,14 @@ package java_collections_framework;
 
 import java.util.*;
 
+class MyCustomComparator implements Comparator<StudentsMarks> {
+
+    @Override
+    public int compare(StudentsMarks o1, StudentsMarks o2) {
+        return o2.getMaths() - o1.getMaths();
+    }
+}
+
 class StudentsMarks implements Comparable<StudentsMarks> {
     private int maths;
     private int physics;
@@ -96,5 +104,38 @@ public class PriorityQueuePractice {
         }
         System.out.println(top3Students);
 //        System.out.println(studentPriorityQueue);
+        System.out.println("-----");
+        PriorityQueue<Integer> intPQ = new PriorityQueue<>((x, y) -> y - x);
+        intPQ.offer(1);
+        intPQ.offer(2);
+        intPQ.offer(0);
+        intPQ.offer(100);
+//        top 2 elements
+        index = 0;
+        while (!intPQ.isEmpty()) {
+            if (index == 2) {
+                break;
+            }
+            System.out.println(intPQ.poll());
+            index++;
+        }
+        System.out.println("-----");
+        PriorityQueue<StudentsMarks> marksPriorityQueue = new PriorityQueue<>((s1, s2) -> {
+            System.out.println("Comparator's compare() is called!");
+            return s2.getPhysics() - s1.getPhysics();
+        });
+        for (StudentsMarks studentsMarks : studentsMarksList) {
+            marksPriorityQueue.add(studentsMarks);
+        }
+        List<StudentsMarks> top3StudentsList = new ArrayList<>();
+        index = 0;
+        while (!marksPriorityQueue.isEmpty()) {
+            if (index == 3) {
+                break;
+            }
+            top3StudentsList.add(marksPriorityQueue.poll());
+            index++;
+        }
+        System.out.println(top3StudentsList);
     }
 }
