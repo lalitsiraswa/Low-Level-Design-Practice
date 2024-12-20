@@ -57,6 +57,26 @@ class StudentsMarks implements Comparable<StudentsMarks> {
         System.out.println("obj.maths : " + obj.maths + " , this.maths : " + this.maths);
         return obj.maths - this.maths;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        StudentsMarks that = (StudentsMarks) obj;
+        System.out.println("this : " + this);
+        System.out.println("that : " + that);
+        return maths == that.maths && physics == that.physics;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + maths;
+        result = prime * result + physics;
+        System.out.println(this + " hashCode() : " + result);
+        return result;
+    }
 }
 
 public class PriorityQueuePractice {

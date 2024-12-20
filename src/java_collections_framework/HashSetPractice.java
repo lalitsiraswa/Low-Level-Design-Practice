@@ -15,6 +15,10 @@ public class HashSetPractice {
 //        for (int val : set) {
 //            System.out.println(val);
 //        }
+
+        System.out.println(set.contains(4));
+        System.out.println(set.contains(10));
+
         set.remove(3);
         System.out.println(set);
         System.out.println("-----");
@@ -30,5 +34,20 @@ public class HashSetPractice {
         System.out.println("---- After Retaining ----");
         System.out.print(set);
         System.out.println(set1);
+
+        System.out.println("-----");
+        Set<StudentsMarks> studentsMarksSet = new HashSet<>();
+        studentsMarksSet.add(new StudentsMarks(70, 80));
+        studentsMarksSet.add(new StudentsMarks(38, 10));
+        studentsMarksSet.add(new StudentsMarks(87, 86));
+        studentsMarksSet.add(new StudentsMarks(40, 76));
+        studentsMarksSet.add(new StudentsMarks(56, 78));
+        studentsMarksSet.add(new StudentsMarks(42, 56));
+//        System.out.println(studentsMarksSet);
+//        for (StudentsMarks studentsMarks : studentsMarksSet) {
+//            System.out.println(studentsMarks);
+//        }
+//        For this to be true, we need to implements the hashCode() & equals() methods in StudentsMarks Class
+        System.out.println(studentsMarksSet.contains(new StudentsMarks(70, 80)));
     }
 }
