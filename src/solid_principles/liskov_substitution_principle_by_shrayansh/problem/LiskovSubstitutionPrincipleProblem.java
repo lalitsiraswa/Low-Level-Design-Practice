@@ -1,4 +1,4 @@
-package solid_principles.liskov_substitution_principle_by_shrayanch.problem;
+package solid_principles.liskov_substitution_principle_by_shrayansh.problem;
 
 interface Bike {
     void turnOnEngine();
