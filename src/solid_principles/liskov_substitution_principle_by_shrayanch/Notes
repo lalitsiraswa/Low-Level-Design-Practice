@@ -1,0 +1,2 @@
+-> If Class B is subtype of Class A, then we should be able to replace object of A with B without breaking the behaviour of the program.
+-> Subclass should extends the capability of parent class, not narrow it down.
