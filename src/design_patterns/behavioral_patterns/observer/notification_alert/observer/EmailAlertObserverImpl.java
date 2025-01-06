@@ -20,5 +20,6 @@ public class EmailAlertObserverImpl implements NotificationAlertObserver {
     private void sendEmail(String emailId, String message) {
         System.out.println("Email Sent To : " + emailId);
         System.out.println("Message : " + message);
+        System.out.println("Stock Count : " + observable.getStockCount());
     }
 }
