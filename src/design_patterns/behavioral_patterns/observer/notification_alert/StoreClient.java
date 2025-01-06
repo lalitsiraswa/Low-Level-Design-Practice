@@ -11,7 +11,7 @@ public class StoreClient {
         StockObservable iphoneStockObservable = new IphoneObservableImpl();
         NotificationAlertObserver observer1 = new EmailAlertObserverImpl(iphoneStockObservable, "jaydeep@gmail.com");
         NotificationAlertObserver observer2 = new EmailAlertObserverImpl(iphoneStockObservable, "krishna@gmail.com");
-        NotificationAlertObserver observer3 = new MobileAlertObserverImpl(iphoneStockObservable, "dadheechsuraj");
+        NotificationAlertObserver observer3 = new MobileAlertObserverImpl(iphoneStockObservable, "dadheechsuraj@gmail.com");
 
         iphoneStockObservable.add(observer1);
         iphoneStockObservable.add(observer2);
