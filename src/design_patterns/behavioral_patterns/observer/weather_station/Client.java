@@ -19,10 +19,8 @@ public class Client {
 //        weatherObservable.add(observer2);
         weatherObservable.add(observer3);
 //        weatherObservable.add(observer4);
-
         weatherObservable.setTemperature(10);
         System.out.println(weatherObservable.getTemperature());
-
         try {
             int temperature = 20;
             while (temperature != 25) {
